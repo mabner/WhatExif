@@ -5,7 +5,7 @@
   "scripts": {
     "clean": "rm dist/bundle.js",
     "dev": "webpack --mode development",
-    "prod": "webpack --mode production",
+    "build": "webpack --mode production",
     "serve": "npx webpack serve"
   },
   "repository": {

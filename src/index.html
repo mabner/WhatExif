@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-- Criterion 3.1.1 - Language of Page-->
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="HTML EXIF Reader." />
+		<link rel="icon" href="img/favicon.ico" />
+
+		<title>WhatEXIF</title>
+		<link
+			rel="stylesheet"
+			href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+		/>
+	</head>
+	<body>
+		<header id="home">
+			<div class="header">
+				<div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+					<h1 class="pure-menu-heading" href="">
+						WhatEXIF - Drag & Drop Exchangeable Image File Format Reader
+					</h1>
+
+					<!-- WAI-ARIA Role - Landmark Navigation -->
+					<div role="navigation" aria-labelledby="menu">
+						<!-- Criterion 3.1.1 - Language of Page-->
+						<!-- Criterion 2.1.1 - Keyboard-->
+						<nav id="menu" role="navigation" aria-label="Main Menu">
+							<ul class="pure-menu-list" role="menubar">
+								<li class="pure-menu-item pure-menu-selected" role="none">
+									<a
+										lang="en"
+										href="#home"
+										class="pure-menu-link"
+										aria-label="Home button"
+										role="menuitem"
+										>Home</a
+									>
+								</li>
+								<li class="pure-menu-item pure-menu-selected" role="none">
+									<a
+										href="https://github.com/mabner/WhatExif"
+										class="pure-menu-link"
+										target="-"
+										role="link"
+										aria-label="GitHub Repository link"
+										>GitHub</a
+									>
+								</li>
+								<li class="pure-menu-item pure-menu-selected" role="none">
+									<a
+										href="#contact"
+										class="pure-menu-link"
+										aria-label="Contact button"
+										role="menuitem"
+										>Contact</a
+									>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- WAI-ARIA Role - Landmark Navigation -->
+		<main role="main">
+			<div class="splash-container">
+				<div class="splash">
+					<!-- Criterion 1.1.1 - Non-text Content-->
+					<div id="dropBox" aria-label="Drag and drop the image here!">
+						<h1 class="splash-head">Drag and drop the image here!</h1>
+					</div>
+
+					<p class="splash-subhead">To read the EXIF data</p>
+				</div>
+			</div>
+		</main>
+		<div class="content-wrapper">
+			<div class="content">
+				<!-- Criterion 1.1.1 - Non-text Content-->
+				<div
+					id="viewBox"
+					class="content-head is-center"
+					aria-label="Images loaded:"
+				></div>
+			</div>
+
+			<div class="content">
+				<!-- Criterion 4.1.2 - Name, Role, Value-->
+				<h2
+					class="content-head is-center"
+					id="contact"
+					aria-labelledby="lbName lbEmail lbMessage lbsendBtn"
+				>
+					Contact
+				</h2>
+
+				<div class="pure-g">
+					<div class="l-box-lrg pure-u-1 pure-u-md-2-5">
+						<form
+							class="pure-form pure-form-stacked"
+							action="confirm_msg.html"
+							name="contact"
+							method="POST"
+							data-netlify="true"
+						>
+							<label id="lbName" for="name">Your name</label>
+							<input id="name" name="name" type="text" />
+
+							<label id="lbEmail" for="email">Your email</label>
+							<input id="email" type="email" name="email" />
+
+							<label id="lbMessage" for="message">Your message</label>
+							<textarea id="message" name="message" rows="6"></textarea>
+
+							<!-- Criterion 1.1.1 - Non-text Content-->
+							<button
+								id="sendBtn"
+								type="submit"
+								class="pure-button"
+								aria-label="Send"
+							>
+								Send
+							</button>
+						</form>
+					</div>
+
+					<div class="l-box-lrg pure-u-1 pure-u-md-3-5">
+						<h4>Contact me</h4>
+						<p>Send your message with feedback or suggestions in the form.</p>
+
+						<h4>More information</h4>
+						<p>
+							Small project being developed as a way to learn about file
+							attribute manipulation using JavaScript.
+						</p>
+					</div>
+				</div>
+			</div>
+			<footer>
+				<div class="footer l-box is-center">Marcos Leite</div>
+			</footer>
+		</div>
+	</body>
+</html>

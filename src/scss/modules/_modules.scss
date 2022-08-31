@@ -1,0 +1,20 @@
+#viewBox {
+  margin-top: 10px;
+}
+#viewBox img {
+  width: 280px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  display: block;
+}
+@media (min-width: 992px) {
+  #viewBox {
+    margin-top: 10px;
+  }
+  #viewBox img {
+    width: 400px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    display: block;
+  }
+}

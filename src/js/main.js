@@ -71,6 +71,14 @@ let handleFiles = (files) => {
 						);
 					};
 					newImage.src = canvas.toDataURL('image/jpeg');
+
+					EXIF.getData(newImage, function () {
+						var make = EXIF.getTag(this, 'Make');
+						var model = EXIF.getTag(this, 'Model');
+						var ExifVersion = EXIF.getTag(this, 'ExifVersion');
+						var makeAndModel = document.getElementById('makeAndModel');
+						makeAndModel.innerHTML = `${make} ${model} ${ExifVersion}`;
+					});
 				};
 				anImage.src = e.target.result;
 			};
@@ -80,23 +88,3 @@ let handleFiles = (files) => {
 	console.log(`Number of images: ${imageAsset.size}`);
 	// console.log(imageName)
 };
-
-
-window.onload = getExif;
-
-function getExif() {
-	var img1 = document.getElementById('newImage1');
-	EXIF.getData(img1, function () {
-		var make = EXIF.getTag(this, 'Make');
-		var model = EXIF.getTag(this, 'Model');
-		var makeAndModel = document.getElementById('makeAndModel');
-		makeAndModel.innerHTML = `${make} ${model}`;
-	});
-
-	var img2 = document.getElementById('newImage2');
-	EXIF.getData(img2, function () {
-		var allMetaData = EXIF.getAllTags(this);
-		var allMetaDataSpan = document.getElementById('allMetaDataSpan');
-		allMetaDataSpan.innerHTML = JSON.stringify(allMetaData, null, '\t');
-	});
-}
